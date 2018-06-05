@@ -1,29 +1,5 @@
-# NativeScript-Vue Application
+# exampleProblemVueNativeScriptNav
 
-> A native application built with NativeScript-Vue
+vue nativescript problem with loading the same component twice.
 
-## Usage
-
-``` bash
-# Install dependencies
-npm install
-
-# Build for production
-npm run build
-npm run build:<platform>
-
-# Build, watch for changes and debug the application
-npm run debug
-npm run debug:<platform>
-
-# Build, watch for changes and run the application
-npm run watch
-npm run watch:<platform>
-
-# Clean the NativeScript application instance (i.e. rm -rf dist)
-npm run clean
-```
-
-> When invoking the various npm scripts, omitting the platform will attempt to launch `tns` for both platforms, which will only work in a properly configured OSX environment.
-
-For detailed instructions, see https://github.com/nativescript-vue/vue-cli-template
+The `Nav` component in `@/components/Nav.vue` is trying to be used in page A and page B which are both in their respective files in `@/components/{A,B}.vue`. The Nav component however is not defined in both pages but only one. You can create the nav as a mixin to get around this, but you would hopefully just be able to use the same component twice.

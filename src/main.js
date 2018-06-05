@@ -1,6 +1,7 @@
 import Vue from "nativescript-vue";
 
 import A from "./components/A";
+// import B from "./components/B";
 
 import store from "./store";
 
@@ -11,6 +12,7 @@ import "./styles.scss";
 
 new Vue({
   render: h => h(A),
+  // render: h => h(B),
 
   store
 }).$start();
